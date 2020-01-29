@@ -1,0 +1,25 @@
+
+<h1>Location: <%= @destination.specific_location %></h1>
+
+<% if @destination.reviews.any? %>
+<h4>Here are the reviews for this destination:</h4>
+
+<% @destination.reviews.each do |review| %>
+  <ul>
+    <li>
+      <%= link_to review.author, destination_review_path(@destination, review) %>
+    </li>
+  </ul>
+<% end %>
+<% else %>
+<p>No reviews are listed for this destination.</p>
+<% end %>
+
+<p><%= link_to "Add a review", new_destination_review_path(@destination) %></p>
+
+<p><%= link_to "Edit", edit_destination_path(@destination) %></p>
+<p><%= link_to "Delete destination", destination_path(@destination),
+                      :data => {:confirm => "Are you sure?",
+                                     :method => "delete"} %></p>
+
+<p><%= link_to "Return to destinations", destinations_path %></p>
