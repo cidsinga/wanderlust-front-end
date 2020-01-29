@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Builder</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% content_for(:navbar) do %>
+      <li><a href="/">Home</a></li>
+      <li><a href="something/else">Something else</a></li>
+      <li><a href="etc">Etc.</a></li>
+    <% end %>
+
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+
+    <%= yield %>
+  </body>
+</html>
