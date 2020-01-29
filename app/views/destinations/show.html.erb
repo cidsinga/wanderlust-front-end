@@ -1,7 +1,7 @@
 
-<h1>Location: <%= @destination.specific_location %></h1>
-<h3>City: <%= @destination.city %></h3>
-<h3>Country: <%= @destination.country %></h3>
+<h1>Location: <span class='white-underline'><%= @destination.specific_location %></span></h1>
+<h3>City: <span class='white-underline'><%= @destination.city %></span></h3>
+<h3>Country: <span class='white-underline'><%= @destination.country %></span></h3>
 
 <% if @destination.reviews.any? %>
 <h4>Here are the reviews for this destination:</h4>
