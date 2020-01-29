@@ -11,6 +11,10 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'faker'
 gem 'httparty'
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
+gem 'turbolinks', '~> 5'
+
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

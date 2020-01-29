@@ -1,0 +1,10 @@
+<h1>Destination: <%= @destination.title %></h1>
+<h2>Review: <%= @review.q1 %></h2>
+
+
+<p><%= link_to "Edit review", edit_destination_review_path(@destination, @review) %></p>
+<p><%= link_to "Delete review", destination_review_path(@destination, @review),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to destination", destination_path(@destination) %></p>

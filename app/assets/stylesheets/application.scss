@@ -15,10 +15,12 @@
  */
 @import "bootstrap";
 body {
-  background-color: #222222;
-  color: #f8f8f8
+  background-color: 	rgb(255,129,193);
+  color: #70D1FE;
+  font-family: 'Rock Salt', cursive;
+//   -webkit-text-stroke-width: .5px;
+// -webkit-text-stroke-color: white;
+padding: 15px;
 }
-
-.jumobtron{
-  text-align: center;
-}
+ a{color: #FED90F;
+ font-weight: bold;}
