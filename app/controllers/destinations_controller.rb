@@ -17,24 +17,25 @@ class DestinationsController < ApplicationController
     response = HTTParty.get("http://localhost:3000/destinations/#{@destination.id}")
   end
 
-  def create
-    @destination = Destination.create!(destination_params)
-    json_response(@destination, :created)
-  end
+  # def create
+  #   @destination = HTTParty.post('http://localhost:3000/destinations')
+  #   json_response(@destination, :created)
+  # end
 
-  def update
-    @destination = Destination.find(params[:id])
-    if @destination.update!(destination_params)
-      render status: 200, json: {
-        message: "This destination has been updated successfully."
-      }
-    end
-  end
+  # def update
+  #   @destination = Destination.find(params[:id])
+  #   @destination = HTTParty.put("http://localhost:3000/destinations/#{@destination.id}")
+  #   if @destination.update!(destination_params)
+  #     render status: 200, json: {
+  #       message: "This destination has been updated successfully."
+  #     }
+  #   end
+  # end
 
-  def destroy
-    @destination = Destination.find(params[:id])
-    @destination.destroy
-  end
+  # def destroy
+  #   @destination = Destination.find(params[:id])
+  #   @destination.destroy
+  # end
 
   private
 

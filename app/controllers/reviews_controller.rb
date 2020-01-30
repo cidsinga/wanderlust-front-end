@@ -8,7 +8,8 @@ class ReviewsController < ApplicationController
 
   def show
     @review = Review.find(params[:id])
-    json_response(@review)
+    @destination = Destination.find(params[:id])
+    response = HTTParty.get("http://localhost:3000/destinations/#{@destination.id}/reviews")
   end
 
   private
